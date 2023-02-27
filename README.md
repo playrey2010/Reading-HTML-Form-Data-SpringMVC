@@ -27,3 +27,18 @@ public class HelloWorldController {
 }
 
 ```
+### helloworld-form.jsp
+The name attribute in the HTML form tag determines the parameter name used in jsp expression language in the helloworld.jsp file.
+
+```
+<form action="processForm" method="get">
+  <input type="text" name="studentName" placeholder="What's your name?">
+  <input type="submit">
+</form>
+```
+
+### helloworld.jsp
+Access html data via dot notation (param)
+```
+Student name: ${param.studentName}
+```
