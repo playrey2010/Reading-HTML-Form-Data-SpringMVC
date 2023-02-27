@@ -10,8 +10,7 @@ public class HelloController {
 
     @RequestMapping("/")
     public String showPage(Model model){
-        model.addAttribute("message", "Oh yeah!");
-        return "hello_world";
+        return "main-menu";
     }
 
 }

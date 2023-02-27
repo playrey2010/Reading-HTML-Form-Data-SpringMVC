@@ -11,7 +11,7 @@
     <title>Spring MVC Demo</title>
 </head>
 <body>
-<h1>Hi there!</h1>
-<h2>${message}</h2>
+<h1>Spring MVC Demo - Home Page</h1>
+<a href="showForm">Hello World form</a>
 </body>
 </html>
