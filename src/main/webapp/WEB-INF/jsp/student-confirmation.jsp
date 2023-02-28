@@ -11,6 +11,7 @@
     <title>Student Confirmation Page</title>
 </head>
 <body>
-<p>New student registered: ${student.lastName}, ${student.firstName} from ${student.country}</p>
+<p>New student registered: ${student.lastName}, ${student.firstName} from ${student.country}.</p>
+<p>Favorite programming language: ${student.favoriteLanguage}</p>
 </body>
 </html>
