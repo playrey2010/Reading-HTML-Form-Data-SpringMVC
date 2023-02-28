@@ -1,9 +1,12 @@
 package com.example;
 
+import java.util.LinkedHashMap;
+
 public class Student {
     private String firstName;
     private String lastName;
     private String country;
+
 
     public Student() {
 
@@ -32,4 +35,5 @@ public class Student {
     public void setCountry(String country) {
         this.country = country;
     }
+
 }
