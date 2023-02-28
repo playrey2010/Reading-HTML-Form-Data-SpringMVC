@@ -3,6 +3,7 @@ package com.example;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -32,6 +33,15 @@ public class HelloWorldController {
         // add message to the model
         model.addAttribute("message", message);
 
+        return "helloworld";
+    }
+
+    // Another method: using RequestParam to bind data into method
+    @RequestMapping("/processWithRequestParam")
+    public String processWithRequestParam(@RequestParam("studentName") String studentName, Model model){
+        studentName = studentName.toUpperCase();
+        String message = "Yo! " + studentName;
+        model.addAttribute("message", message);
         return "helloworld";
     }
 }

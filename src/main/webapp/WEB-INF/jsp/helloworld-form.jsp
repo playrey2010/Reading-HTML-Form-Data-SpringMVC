@@ -11,7 +11,7 @@
     <title>Hello World Form</title>
 </head>
 <body>
-<form action="processFormWithModel" method="get">
+<form action="processWithRequestParam" method="get">
   <input type="text" name="studentName" placeholder="What's your name?">
   <input type="submit">
 </form>
