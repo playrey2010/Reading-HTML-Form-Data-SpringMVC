@@ -23,6 +23,15 @@
     <br>
     <br>
     <input type="submit" value="Submit">
+    <br>
+    <br>
+    <form:select path="country">
+      <form:option value="Brazil" label="Brazil"/>
+      <form:option value="France" label="France"/>
+      <form:option value="Germany" label="Germany"/>
+      <form:option value="Puerto Rico" label="Puerto Rico"/>
+
+    </form:select>
   </form:form>
 
 </form>
