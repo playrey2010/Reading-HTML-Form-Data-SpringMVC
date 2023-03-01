@@ -140,7 +140,7 @@ Problem to address: Current validation allows for entries with only spaces
 Problem addressed: Added @InitBinder method to trim all Strings starting and trailing whitespaces, and also trim down to null if String only contains whitespace. 
 
 ### CustomerController.java
-
+The initBinder will also avoid problems of the "  Smith    " sort. 
 ```
     // add an initBinder ... to convert trim input strings
     // remove leading and trailing whitespace
