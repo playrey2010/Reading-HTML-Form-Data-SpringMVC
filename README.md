@@ -112,3 +112,28 @@ IN=India
     private Map<String, String> countryOptions;
 
 ```
+
+# Spring Validation
+This customer class uses Spring validation to prohibit empty entries on the customer form page. 
+### Customer.java
+```
+    @NotNull
+    @Size(min = 1, message = "is required")
+    private String lastName;
+```
+
+### CustomerController.java
+Here we check for validation errors and return the message "is required" set in the validation message. 
+```
+    @RequestMapping("/processForm")
+    public String processForm(@Valid @ModelAttribute("customer") Customer customer, BindingResult result) {
+        System.out.println("Last Name: |" + customer.getLastName() + "|");
+        if (result.hasErrors()){
+            return "customer-form";
+        } else {
+            return "customer-confirmation";
+        }
+    }
+```
+
+Problem to address: Current validation allows for entries with only spaces
