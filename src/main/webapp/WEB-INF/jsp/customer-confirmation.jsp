@@ -12,6 +12,8 @@
 </head>
 <body>
 <h2>New customer registered: ${customer.firstName} ${customer.lastName}</h2>
+<h3>Number of free passes: ${customer.freePasses}</h3>
+<h3>Postal Code: ${customer.postalCode}</h3>
 
 </body>
 </html>

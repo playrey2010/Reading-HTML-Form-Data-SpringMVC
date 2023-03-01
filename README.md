@@ -152,3 +152,16 @@ The initBinder will also avoid problems of the "  Smith    " sort.
     }
 
 ```
+
+The @InitBinder works also with Integers in typical HTML forms as empty number fields come in as Strings. 
+In this case, changing the freePasses to the wrapper Integer class and providing a custom error message for typemismatch will work.
+
+Configure the messsages file in the servlet.xml file 
+
+# spring-mvc-demo-servlet.xml 
+```
+    <bean id="messageSource"
+          class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basenames" value="messages"/>
+    </bean>
+```
