@@ -137,3 +137,18 @@ Here we check for validation errors and return the message "is required" set in 
 ```
 
 Problem to address: Current validation allows for entries with only spaces
+Problem addressed: Added @InitBinder method to trim all Strings starting and trailing whitespaces, and also trim down to null if String only contains whitespace. 
+
+### CustomerController.java
+
+```
+    // add an initBinder ... to convert trim input strings
+    // remove leading and trailing whitespace
+    // resolve issue for our validation
+    @InitBinder
+    public void initBinder(WebDataBinder dataBinder){
+        StringTrimmerEditor stringTrimmerEditor = new StringTrimmerEditor(true);
+        dataBinder.registerCustomEditor(String.class, stringTrimmerEditor);
+    }
+
+```
